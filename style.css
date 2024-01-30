@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(76, 160, 84);
+    /* para centrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* otra forma de centrar igual que el product card*/
+    /* display: grid;
+    place-content: center;
+    min-height: 100vh; */
+}
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Define 4 columnas con el mismo tamaño */
+    gap: 0.5rem;  /* Espacio entre filas y columnas */
+    width: 31.4rem; /* 314px */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#pantalla {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    grid-column: span 4;
+}
+input[type="button"] {
+/*     width: 70px; */
+    height: 4rem;
+    font-size: 1.6rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background-color: #ddd;
+}
+input[value="="]{
+    background-color: rgb(76, 160, 84);
+    grid-column: span 2;
+}
+input[value="="]:hover{
+    background-color: rgb(72, 130, 78);
+}
+input[value="Delete"]{
+    grid-column: span 2;
+}
+input[value="C"]{
+    grid-column: span 2;
+}
